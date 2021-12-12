@@ -107,13 +107,7 @@ TemplateMatch getMatch(const cv::Mat &img, const cv::Mat &templ) {
 	cv::minMaxLoc(result, &minVal, &maxVal, &minLoc, &maxLoc, cv::Mat());
 
 	// Create template match
-	TemplateMatch match =
-		{
-			maxVal,
-			cv::Rect2i(maxLoc.x, maxLoc.y, templ.cols, templ.rows),
-			result,
-			templ
-		};
+	TemplateMatch match(maxVal, cv::Rect2i(maxLoc.x, maxLoc.y, templ.cols, templ.rows));
 
 	return match;
 }

@@ -24,12 +24,6 @@ class TemplateMatch {
 	// Bounding box of the template
 	cv::Rect rect;
 
-	// cv::Mat result from templateMatch()
-	cv::Mat matchResult;
-
-	// Template used on this template match
-	cv::Mat templ;
-
 	/**
 	 * @brief Constructor
 	 *
@@ -38,8 +32,7 @@ class TemplateMatch {
 	 * @param result Result image returned by cv::matchTemplate()
 	 * @param templ  Template used in match
 	 */
-	TemplateMatch(double score, const cv::Rect2i& rect, cv::Mat  result, cv::Mat  templ) :
-		score(score), rect(rect), matchResult(std::move(result)), templ(std::move(templ)) {}
+	TemplateMatch(double score, const cv::Rect2i &rect) : score(score), rect(rect) {}
 
 	/**
 	 * @brief Default constructor (angle=0, score=-DBL_MAX, rect=(0,0,0,0))

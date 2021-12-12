@@ -5,7 +5,7 @@
 #include "template_match.h"
 #include "pf_init_constants.h"
 
-//
+
 /**
  * @brief Run template matching on a base image with a template generated over range of scales and rotations
  * @param img the image to match the template to
