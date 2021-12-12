@@ -15,7 +15,6 @@
  */
 std::vector<TemplateMatch> match(const cv::Mat& img, const cv::Mat& proj_mat, const pfc::matchConfig& cfg);
 
-// Equivalent to match but splitting scale range amongst # of parallel threads
 /**
  * @brief Equivalent to match but divides the pitch search amongst parallel threads
  * @param img the image to match the template to
